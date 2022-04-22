@@ -1,0 +1,8 @@
+.card-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.card-bottom input {
+  margin: 0 24px;
+}
