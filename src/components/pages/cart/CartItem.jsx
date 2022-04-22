@@ -2,7 +2,7 @@ import React from 'react';
 
 import './ShoppingCartItem.css';
 
-function ShoppingCartItem(props) {
+function CartItem(props) {
   return (
     <div className="shopping-cart-item">
       <h4>Some Title</h4>
@@ -13,4 +13,4 @@ function ShoppingCartItem(props) {
   );
 }
 
-export default ShoppingCartItem;
+export default CartItem;

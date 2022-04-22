@@ -7,7 +7,7 @@ import {
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
 import ProductList from './pages/home/ProductList';
-import ShoppingCart from './pages/cart/ShoppingCart';
+import Cart from './pages/cart/ShoppingCart';
 
 import './App.css';
 
@@ -26,7 +26,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Card><ProductList/></Card>}/>
-          <Route path="/cart" element={<Card><ShoppingCart/></Card>}/>
+          <Route path="/cart" element={<Card><Cart/></Card>}/>
           <Route path="/order" element={<Card>order</Card>}/>
           <Route path="/profile" element={<Card>profile</Card>}/>
         </Routes>
