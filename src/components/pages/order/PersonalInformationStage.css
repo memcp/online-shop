@@ -1,0 +1,15 @@
+.personal-information-stage form {
+  display: flex;
+
+  width: 400px;
+}
+
+.personal-information-stage input {
+  margin: 16px 0;
+}
+
+.personal-information-stage form input[type="submit"] {
+  padding: 12px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}

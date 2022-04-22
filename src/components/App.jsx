@@ -8,6 +8,7 @@ import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
 import ProductList from './pages/home/ProductList';
 import Cart from './pages/cart/Cart';
+import Order from './pages/order/Order';
 
 import './App.css';
 
@@ -27,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Card><ProductList/></Card>}/>
           <Route path="/cart" element={<Card><Cart/></Card>}/>
-          <Route path="/order" element={<Card>order</Card>}/>
+          <Route path="/order" element={<Card><Order/></Card>}/>
           <Route path="/profile" element={<Card>profile</Card>}/>
         </Routes>
       </Wrapper>

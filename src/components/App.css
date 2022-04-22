@@ -69,7 +69,16 @@ p {
   padding: 8px 0;
 }
 
-button {
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 16px 24px;
+}
+
+button, input[type="submit"] {
   background-color: #5446ff;
   color: #ffffff;
   padding: 8px 16px;
@@ -88,7 +97,7 @@ button.negative:hover {
   color: #ffffff;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #483be8;
   cursor: pointer;
 }
