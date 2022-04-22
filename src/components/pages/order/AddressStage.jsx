@@ -5,6 +5,7 @@ import './AddressStage.css';
 function AddressStage(props) {
   return (
     <div className="address-stage">
+      <h3>Address</h3>
       <form>
         <label htmlFor="town">Town</label>
         <input type="text" name="town"/>
