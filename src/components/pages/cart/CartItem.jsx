@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ShoppingCartItem.css';
+import './CartItem.css';
 
 function CartItem(props) {
   return (

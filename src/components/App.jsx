@@ -7,7 +7,7 @@ import {
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
 import ProductList from './pages/home/ProductList';
-import Cart from './pages/cart/ShoppingCart';
+import Cart from './pages/cart/Cart';
 
 import './App.css';
 
