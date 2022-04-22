@@ -7,7 +7,7 @@ import './Order.css';
 
 function Order(props) {
 
-  const currentStage = 'credit-card-stage';
+  const currentStage = 'address-stage';
 
   return (
     <div className="order">
