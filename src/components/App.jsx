@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
-import ProductList from './pages/ProductList';
-import ShoppingCart from './pages/ShoppingCart';
+import ProductList from './pages/home/ProductList';
+import ShoppingCart from './pages/cart/ShoppingCart';
 
 import './App.css';
 

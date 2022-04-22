@@ -1,6 +1,6 @@
 import React from 'react';
-import Product from '../Product';
-import ShoppingCartItem from '../ShoppingCartItem';
+import Product from '../home/Product';
+import ShoppingCartItem from './ShoppingCartItem';
 
 import './ShoppingCart.css';
 
