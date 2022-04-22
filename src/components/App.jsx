@@ -17,6 +17,7 @@ function App() {
           <nav>
             <Link class="navigation-item" to="/">Home</Link>
             <Link class="navigation-item" to="/cart">Cart</Link>
+            <Link class="navigation-item" to="/order">Order</Link>
             <Link class="navigation-item" to="/profile">Profile</Link>
           </nav>
         </Card>
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Card>home</Card>}/>
           <Route path="/cart" element={<Card>cart</Card>}/>
+          <Route path="/order" element={<Card>order</Card>}/>
           <Route path="/profile" element={<Card>profile</Card>}/>
         </Routes>
       </Wrapper>
