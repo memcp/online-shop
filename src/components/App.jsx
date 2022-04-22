@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
-
+import ProductList from './pages/ProductList';
 import './App.css';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         </Card>
 
         <Routes>
-          <Route path="/" element={<Card>home</Card>}/>
+          <Route path="/" element={<Card><ProductList/></Card>}/>
           <Route path="/cart" element={<Card>cart</Card>}/>
           <Route path="/order" element={<Card>order</Card>}/>
           <Route path="/profile" element={<Card>profile</Card>}/>

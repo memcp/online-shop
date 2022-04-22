@@ -1,0 +1,15 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lavender;
+  padding-bottom: 24px;
+}
+
+.product:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cost {
+  color: #0f219a;
+}

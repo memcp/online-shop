@@ -49,6 +49,32 @@ table {
 
 body {
   background-color: #f5f5f5;
+  color: #222;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+p {
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+button {
+  background-color: #5446ff;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #483be8;
+  cursor: pointer;
 }
 
 .navigation-item {
