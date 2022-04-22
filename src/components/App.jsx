@@ -7,6 +7,8 @@ import {
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
 import ProductList from './pages/ProductList';
+import ShoppingCart from './pages/ShoppingCart';
+
 import './App.css';
 
 function App() {
@@ -15,16 +17,16 @@ function App() {
       <Wrapper>
         <Card>
           <nav>
-            <Link class="navigation-item" to="/">Home</Link>
-            <Link class="navigation-item" to="/cart">Cart</Link>
-            <Link class="navigation-item" to="/order">Order</Link>
-            <Link class="navigation-item" to="/profile">Profile</Link>
+            <Link className="navigation-item" to="/">Home</Link>
+            <Link className="navigation-item" to="/cart">Cart</Link>
+            <Link className="navigation-item" to="/order">Order</Link>
+            <Link className="navigation-item" to="/profile">Profile</Link>
           </nav>
         </Card>
 
         <Routes>
           <Route path="/" element={<Card><ProductList/></Card>}/>
-          <Route path="/cart" element={<Card>cart</Card>}/>
+          <Route path="/cart" element={<Card><ShoppingCart/></Card>}/>
           <Route path="/order" element={<Card>order</Card>}/>
           <Route path="/profile" element={<Card>profile</Card>}/>
         </Routes>

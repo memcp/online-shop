@@ -1,0 +1,19 @@
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopping-cart button.negative {
+  width: 128px;
+}
+
+.confirm-order {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
