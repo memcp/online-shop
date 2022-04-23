@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Routes,
   Route,
   Link,
 } from 'react-router-dom';
+
 import Wrapper from './containers/Wrapper';
 import Card from './containers/Card';
 import ProductList from './pages/home/ProductList';
@@ -11,9 +13,20 @@ import Cart from './pages/cart/Cart';
 import Order from './pages/order/Order';
 import Profile from './pages/profile/Profile';
 
+import {
+  createFetchProductsAction,
+} from '../store/products/actions';
+
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchProductsAction = createFetchProductsAction();
+    dispatch(fetchProductsAction);
+  }, []);
+
   return (
     <div className="App">
       <Wrapper>
