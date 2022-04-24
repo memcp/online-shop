@@ -8,7 +8,6 @@ import './Cart.css';
 
 function Cart(props) {
   const { items } = useSelector((state) => state.cart);
-  console.log(items);
 
   return (
     <div className="shopping-cart">
@@ -18,6 +17,7 @@ function Cart(props) {
             return (
               <CartItem
                 key={item.id}
+                id = {item.id}
                 title={item.title}
                 description={item.description}
                 price={item.price}
@@ -27,7 +27,7 @@ function Cart(props) {
         }
       </div>
 
-      <h3>Items: 0</h3>
+      <h3>Items: {items.length}</h3>
       <button className="confirm-order">Order</button>
     </div>
   );
