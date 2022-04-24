@@ -28,7 +28,6 @@ function ProductList(props) {
           setToExclude={setToExclude}
         />
       </div>
-      {/* TODO excluding filter */}
       {
         excludedProducts.map(
           product => (
