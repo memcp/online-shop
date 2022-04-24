@@ -1,0 +1,8 @@
+.excluding-filter-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.excluding-filter-form input {
+  margin-left: 8px;
+}
