@@ -93,6 +93,10 @@ button, input[type="submit"] {
   border-radius: 4px;
 }
 
+button:disabled, button:disabled:hover {
+  background-color: #e1e1e1;
+}
+
 button.negative {
   background-color: transparent;
   color: #222222;
