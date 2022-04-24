@@ -23,7 +23,6 @@ function Product(props) {
     return items.some(item => item.id === id);
   }
 
-  // TODO disable button if product already added to cart
   return (
     <div key={id} className="product">
       <h3>{title}</h3>
