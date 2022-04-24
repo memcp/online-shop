@@ -6,7 +6,7 @@ import './Product.css';
 
 function Product(props) {
   const { id, title, description, price } = props;
-  const { items } = useSelector((state) => state.cart)
+  const { items } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -21,7 +21,7 @@ function Product(props) {
 
   const alreadyInCart = (id) => {
     return items.some(item => item.id === id);
-  }
+  };
 
   return (
     <div key={id} className="product">

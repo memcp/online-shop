@@ -17,12 +17,12 @@ function Cart(props) {
             return (
               <CartItem
                 key={item.id}
-                id = {item.id}
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 price={item.price}
               />
-            )
+            );
           })
         }
       </div>

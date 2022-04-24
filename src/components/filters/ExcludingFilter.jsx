@@ -15,7 +15,7 @@ function ExcludingFilter(props) {
 
   const handleExcludeFieldChange = (e) => {
     setToExclude(e.target.value);
-  }
+  };
 
   const handleSubmit = (e) => e.preventDefault();
 

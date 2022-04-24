@@ -15,15 +15,15 @@ function sorted(products, by = 'id', order = 'asc') {
 }
 
 function SortingFilter(props) {
-  const {  setSortingField, setSortingOrder } = props;
+  const { setSortingField, setSortingOrder } = props;
 
   const handleSortingOrderChange = (e) => {
     setSortingOrder(e.target.value);
-  }
+  };
 
   const handleSortingFieldChange = (e) => {
     setSortingField(e.target.value);
-  }
+  };
 
   return (
     <div className="sorting-filter">

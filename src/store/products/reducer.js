@@ -21,14 +21,15 @@ export function reducer(state = initialState, action) {
     console.log('arr', arr);
     return {
       ...state,
-      products: state.products.filter(product => product.id !== action.payload.id),
-    }
+      products: state.products.filter(
+        product => product.id !== action.payload.id),
+    };
   }
 
   if (action.type === FETCH_PRODUCTS_ACTION) {
     return {
       ...state,
-      products: action.payload
+      products: action.payload,
     };
   }
 

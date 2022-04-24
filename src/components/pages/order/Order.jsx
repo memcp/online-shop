@@ -12,7 +12,9 @@ function Order(props) {
   return (
     <div className="order">
       <div className="stages">
-        {currentStage === 'personal-info-stage' ? <PersonalInformationStage/> : null}
+        {currentStage === 'personal-info-stage'
+          ? <PersonalInformationStage/>
+          : null}
         {currentStage === 'credit-card-stage' ? <CreditCardStage/> : null}
         {currentStage === 'address-stage' ? <AddressStage/> : null}
       </div>
