@@ -30,7 +30,7 @@ function Product(props) {
       <p>{description}</p>
       <p><span className="cost">Price: </span>{price}</p>
       <button
-        disabled={alreadyInCart(id) ? true : false}
+        disabled={alreadyInCart(id)}
         onClick={handleClick}
       >
         ADD TO CART
