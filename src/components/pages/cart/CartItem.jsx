@@ -3,11 +3,18 @@ import React from 'react';
 import './CartItem.css';
 
 function CartItem(props) {
+  const { id, title, description, price } = props;
+
+  const cut = (description) => {
+    const shorStringLength = 80;
+    return description.slice(0, shorStringLength) + '...';
+  };
+
   return (
-    <div className="shopping-cart-item">
-      <h4>Some Title</h4>
-      <p>Short description bla bla bla bla</p>
-      <p>Cost: 500</p>
+    <div key={id} className="shopping-cart-item">
+      <h4>{title}</h4>
+      <p>{cut(description)}</p>
+      <p>Price: {price}</p>
       <button className="negative">Remove</button>
     </div>
   );
