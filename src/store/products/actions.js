@@ -4,10 +4,10 @@ import {
   REMOVE_PRODUCT_ACTION,
 } from '../constants';
 
-const createAddProductAction = (id, name, description, cost) => {
+const createAddProductAction = (id, title, description, price) => {
   return {
     type: ADD_PRODUCT_ACTION,
-    payload: { id, name, description, cost },
+    payload: { id, title, description, price },
   };
 }
 
