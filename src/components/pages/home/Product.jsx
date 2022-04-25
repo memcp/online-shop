@@ -5,7 +5,7 @@ import { createAddCartItemAction } from '../../../store/cart/actions';
 import './Product.css';
 
 function Product(props) {
-  const { id, title, description, price } = props;
+  const { id, title, image, description, price } = props;
   const { items } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -26,6 +26,7 @@ function Product(props) {
   return (
     <div key={id} className="product">
       <h3>{title}</h3>
+      <img src={image} width={100} alt="An Image"/>
       <p>{description}</p>
       <p><span className="cost">Price: </span>{price}</p>
       <button
