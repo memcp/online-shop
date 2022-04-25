@@ -1,15 +1,25 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import './Profile.css';
 
 function Profile(props) {
+  const profile = useSelector((state) => state.profile);
+  console.log(profile);
+  const order = useSelector((state) => state.order);
+
   return (
     <div className="profile">
       <h3>Your Profile</h3>
-      <p>First Name: Ilyas</p>
-      <p>Surname: Garipov</p>
-      <p>Phone Number: 9 (999) 888-88-88</p>
-      <p>Address: Town, Street, Home, Flat</p>
+      <p>First Name: {profile.personalInformation.firstName}</p>
+      <p>Surname: {profile.personalInformation.surname}</p>
+      <p>Phone Number: {profile.personalInformation.phoneNumber}</p>
+      <p>Address:
+        {order.address.town},
+        {order.address.street},
+        {order.address.home},
+        {order.address.flat}
+      </p>
     </div>
   );
 }

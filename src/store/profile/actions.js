@@ -3,10 +3,10 @@ import {
 } from '../constants';
 
 const createChangePersonalInformationAction = (
-  firstname, surname, phoneNumber) => {
+  firstName, surname, phoneNumber) => {
   return {
     type: CHANGE_PERSONAL_INFORMATION_ACTION,
-    payload: { firstname, surname, phoneNumber },
+    payload: { firstName, surname, phoneNumber },
   };
 };
 
