@@ -22,8 +22,8 @@ const createChangeOrderStageAction = (stage) => {
   return {
     type: CHANGE_ORDER_STAGE_ACTION,
     payload: stage,
-  }
-}
+  };
+};
 
 export {
   createChangeAddressAction,

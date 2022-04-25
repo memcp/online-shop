@@ -9,7 +9,6 @@ import {
 } from '../../../store/profile/actions';
 import useInput from '../../../hooks/useInput';
 
-
 import './PersonalInformationStage.css';
 
 function PersonalInformationStage(props) {
