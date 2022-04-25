@@ -18,7 +18,6 @@ export function reducer(state = initialState, action) {
 
   if (action.type === REMOVE_PRODUCT_ACTION) {
     const arr = state.products.filter(product => product !== action.payload.id);
-    console.log('arr', arr);
     return {
       ...state,
       products: state.products.filter(

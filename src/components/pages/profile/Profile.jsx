@@ -5,7 +5,6 @@ import './Profile.css';
 
 function Profile(props) {
   const profile = useSelector((state) => state.profile);
-  console.log(profile);
   const order = useSelector((state) => state.order);
 
   return (
