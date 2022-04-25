@@ -2,10 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import useInput from '../../../hooks/useInput';
+import useStage from '../../../hooks/useStage';
 import {
   createChangeCreditCardAction,
   createChangeOrderStageAction,
 } from '../../../store/order/actions';
+import { ADDRESS_STAGE } from '../../../store/constants';
 
 import './CreditCardStage.css';
 
@@ -15,26 +17,25 @@ function CreditCardStage(props) {
   const expirationDate = useInput('');
   const cvv = useInput('');
 
-  const dispatch = useDispatch();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const nextStage = 'address-stage';
-    const changeOrderStageAction = createChangeOrderStageAction(nextStage);
-    const changeCreditCardAction = createChangeCreditCardAction(
-      cardNumber.value,
-      cardHolder.value,
-      expirationDate.value,
-      cvv.value,
-    );
-    dispatch(changeCreditCardAction);
-    dispatch(changeOrderStageAction);
-  };
+  const creditCardStage = useStage(
+    ADDRESS_STAGE,
+    [
+      {
+        action: createChangeCreditCardAction,
+        data: [
+          cardNumber.value,
+          cardHolder.value,
+          expirationDate.value,
+          cvv.value,
+        ],
+      },
+    ],
+  );
 
   return (
     <div className="credit-card-stage">
       <h3>Credit Card</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={creditCardStage.handleSubmit}>
         <label htmlFor="card-number">Card Number</label>
         <input
           type="text"

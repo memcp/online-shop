@@ -1,5 +1,4 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 
 import {
   createChangeOrderStageAction,
@@ -8,6 +7,8 @@ import {
   createChangePersonalInformationAction,
 } from '../../../store/profile/actions';
 import useInput from '../../../hooks/useInput';
+import useStage from '../../../hooks/useStage';
+import { CREDIT_CARD_STAGE } from '../../../store/constants';
 
 import './PersonalInformationStage.css';
 
@@ -16,25 +17,22 @@ function PersonalInformationStage(props) {
   const surname = useInput('');
   const phoneNumber = useInput('');
 
-  const dispatch = useDispatch();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const nextStage = 'credit-card-stage';
-    const changeOrderStageAction = createChangeOrderStageAction(nextStage);
-    const personalInformationAction = createChangePersonalInformationAction(
-      firstName.value,
-      surname.value,
-      phoneNumber.value,
-    );
-    dispatch(personalInformationAction);
-    dispatch(changeOrderStageAction);
-  };
+  const personalInfoStage = useStage(
+    CREDIT_CARD_STAGE,
+    [
+      {
+        action: createChangePersonalInformationAction,
+        data: [
+          firstName.value, surname.value, phoneNumber.value,
+        ],
+      },
+    ],
+  );
 
   return (
     <div className="personal-information-stage">
       <h3>Personal Information</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={personalInfoStage.handleSubmit}>
         <label htmlFor="firstname">First Name</label>
         <input
           type="text"

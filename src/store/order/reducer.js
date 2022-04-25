@@ -1,12 +1,14 @@
 import {
   CHANGE_ADDRESS_ACTION,
-  CHANGE_CREDIT_CARD_ACTION, CHANGE_ORDER_STAGE_ACTION,
+  CHANGE_CREDIT_CARD_ACTION,
+  CHANGE_ORDER_STAGE_ACTION,
+  PERSONAL_INFORMATION_STAGE,
 } from '../constants';
 
 const initialState = {
   address: {},
   creditCard: {},
-  orderStage: 'personal-information-stage',
+  orderStage: PERSONAL_INFORMATION_STAGE,
 };
 
 export function reducer(state = initialState, action) {

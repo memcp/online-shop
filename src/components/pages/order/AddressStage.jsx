@@ -1,8 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import useInput from '../../../hooks/useInput';
+import useStage from '../../../hooks/useStage';
 import { createChangeAddressAction } from '../../../store/order/actions';
+import { ORDER_COMPLETED_STAGE } from '../../../store/constants';
 
 import './AddressStage.css';
 
@@ -12,25 +13,20 @@ function AddressStage(props) {
   const home = useInput('');
   const flat = useInput('');
 
-  const dispatch = useDispatch();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const changeAddressAction = createChangeAddressAction(
-      town.value,
-      street.value,
-      home.value,
-      flat.value,
-    );
-
-    dispatch(changeAddressAction);
-  };
+  const addressStage = useStage(
+    ORDER_COMPLETED_STAGE,
+    [
+      {
+        action: createChangeAddressAction,
+        data: [town.value, street.value, home.value, flat.value],
+      },
+    ],
+  );
 
   return (
     <div className="address-stage">
       <h3>Address</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={addressStage.handleSubmit}>
         <label htmlFor="town">Town</label>
         <input type="text" value={town.value} onChange={town.onChange}
                name="town"/>
