@@ -1,16 +1,8 @@
 import {
-  CHANGE_PERSONAL_INFORMATION_ACTION,
   CHANGE_ADDRESS_ACTION,
   CHANGE_CREDIT_CARD_ACTION,
+  CHANGE_ORDER_STAGE_ACTION,
 } from '../constants';
-
-const createChangePersonalInformationAction = (
-  firstname, surname, phoneNumber) => {
-  return {
-    type: CHANGE_PERSONAL_INFORMATION_ACTION,
-    payload: { firstname, surname, phoneNumber },
-  };
-};
 
 const createChangeAddressAction = (town, street, home, flat) => {
   return {
@@ -26,8 +18,15 @@ const createChangeCreditCardAction = (number, holder, expirationDate, cvv) => {
   };
 };
 
+const createChangeOrderStageAction = (stage) => {
+  return {
+    type: CHANGE_ORDER_STAGE_ACTION,
+    payload: stage,
+  }
+}
+
 export {
-  createChangePersonalInformationAction,
   createChangeAddressAction,
   createChangeCreditCardAction,
+  createChangeOrderStageAction,
 };
